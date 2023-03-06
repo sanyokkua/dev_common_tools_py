@@ -1,0 +1,19 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+pyqt6 = "6.4.2"
+
+[dev-packages]
+pyinstaller = "*"
+pytest = "*"
+black = "*"
+isort = "*"
+mypy = "*"
+pytest-cov = "*"
+
+[requires]
+python_version = "3.11"
+python_full_version = "3.11.2"

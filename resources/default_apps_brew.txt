@@ -1,0 +1,38 @@
+MacOs
+
+Brew ->
+
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+brew tap homebrew/cask-versions
+
+==> Formulae
+git
+node@18
+go
+poetry
+python@3.11
+
+==> Casks
+
+android-file-transfer
+google-chrome
+postman
+temurin17
+bitwarden
+intellij-idea
+skype
+tiles
+dbeaver-community
+keka
+spotify
+transmission
+docker
+microsoft-edge
+spybuster
+visual-studio-code
+drawio
+opera
+steam
+firefox
+origin
+tad
