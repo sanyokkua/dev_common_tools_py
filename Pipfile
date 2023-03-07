@@ -4,7 +4,7 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-pyqt6 = "6.4.2"
+pyside6 = "6.4.2"
 
 [dev-packages]
 pyinstaller = "*"

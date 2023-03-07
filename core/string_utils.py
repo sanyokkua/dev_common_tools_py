@@ -17,11 +17,15 @@ def make_lines(text: str, separator: str = "\n") -> list[str]:
     return result
 
 
-def sort_lines(lines: list[str], order: str = ASC, case_insensitive: bool = False) -> list[str]:
+def sort_lines(
+    lines: list[str], order: str = ASC, case_insensitive: bool = False
+) -> list[str]:
     if not lines or len(lines) <= 1:
         return lines
     if order not in [ASC, DESC]:
-        raise SortingOrderIsNotSupportedException("Passed order ({}) is not supported".format(order))
+        raise SortingOrderIsNotSupportedException(
+            "Passed order ({}) is not supported".format(order)
+        )
 
     if case_insensitive:
         sorted_strings = sorted(lines, key=str.casefold)
