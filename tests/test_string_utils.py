@@ -1,4 +1,5 @@
 import pytest
+
 import core.string_utils as su
 
 
@@ -7,9 +8,11 @@ def test_strip_line():
     res_2 = su.strip_line("    line     ")
     res_3 = su.strip_line("line")
     res_4 = su.strip_line("line      ")
-    res_5 = su.strip_line("""
+    res_5 = su.strip_line(
+        """
     line
-    """)
+    """
+    )
 
     assert res_1 == "line"
     assert res_2 == "line"
@@ -41,7 +44,9 @@ def test_make_lines():
     assert res_1[1] == "Sentence 2."
     assert res_1[2] == "Sentence more."
     assert res_1[3] == "Sentence6"
-    assert res_1[4] == "Sentence 7 has a lot of text and should be a separate line also!"
+    assert (
+        res_1[4] == "Sentence 7 has a lot of text and should be a separate line also!"
+    )
 
 
 def test_sort_lines_asc_default():
@@ -64,7 +69,7 @@ def test_sort_lines_asc_default():
         "lemon",
         "quince",
         "honeydew",
-        "strawberry"
+        "strawberry",
     ]
 
     result: list[str] = su.sort_lines(lines_to_sort)
@@ -88,7 +93,7 @@ def test_sort_lines_asc_default():
         "quince",
         "raspberry",
         "strawberry",
-        "tangerine"
+        "tangerine",
     ]
 
 
@@ -112,7 +117,7 @@ def test_sort_lines_desc():
         "lemon",
         "quince",
         "honeydew",
-        "strawberry"
+        "strawberry",
     ]
 
     result: list[str] = su.sort_lines(lines=lines_to_sort, order=su.DESC)
@@ -136,7 +141,7 @@ def test_sort_lines_desc():
         "date",
         "cherry",
         "banana",
-        "apple"
+        "apple",
     ]
 
 
@@ -160,7 +165,7 @@ def test_sort_lines_asc_case_insensitive():
         "Lemon",
         "quince",
         "honeydew",
-        "strawberry"
+        "strawberry",
     ]
 
     result: list[str] = su.sort_lines(lines_to_sort, case_insensitive=True)
@@ -204,24 +209,12 @@ def test_sort_lines_with_incorrect_argument():
 
 
 def test_join_lines():
-    lines_to_join_1 = [
-        "line1",
-        "line2",
-        "line3",
-        "line4",
-        "line5"
-    ]
+    lines_to_join_1 = ["line1", "line2", "line3", "line4", "line5"]
     res_1 = su.join_lines(lines_to_join_1)
 
     assert res_1 == "line1 line2 line3 line4 line5"
 
-    lines_to_join_2 = [
-        "line1",
-        "line2",
-        "line3",
-        "line4",
-        "line5"
-    ]
+    lines_to_join_2 = ["line1", "line2", "line3", "line4", "line5"]
     res_2 = su.join_lines(lines_to_join_2, separator="&&")
 
     assert res_2 == "line1&&line2&&line3&&line4&&line5"
