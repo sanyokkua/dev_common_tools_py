@@ -1,0 +1,5 @@
+git
+node@18
+go
+poetry
+python@3.11
