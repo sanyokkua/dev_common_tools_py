@@ -1,7 +1,7 @@
 # dev_common_tools_py
 Common tools required in everyday life of software engineer
 
-This small application will provide common simple functions that can be used in everyday life almost each developer.
+This small application will provide common simple functions that can be used in everyday life almost each developer without searching them somewhere in the Internet.
 
 First of all it can generate terminal commands in example for Git username/email configuration, brew/winget commands to install everyday soft to the freshly install OS.
 Also it provides string utils, for example split/join text/lines, sort ASC/DESC ignoring or not ignoring case.
